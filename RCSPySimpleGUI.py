@@ -10,7 +10,8 @@ layout = [
 ]
 
 
-window=sg.Window("Reddit Comment Search", layout)
+window=sg.Window("Reddit Comment Search", layout).Finalize()
+window.Maximize()
 
 while True:
     event, values=window.read()

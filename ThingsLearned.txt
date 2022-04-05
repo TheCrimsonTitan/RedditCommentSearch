@@ -1,10 +1,11 @@
 Sources:
 https://praw.readthedocs.io/en/stable/tutorials/comments.html
 
+https://pysimplegui.readthedocs.io/en/latest/call%20reference/#maximize
 
 https://old.reddit.com/r/redditdev/comments/iqe99f/new_to_python_and_looking_to_get_all_user/
 
 Notes:
 -Learned how to use elements of PRAW to search a user's comments in reddit
 - Had to run this command to get tkinter and pysimple gui working: sudo apt-get install python3-tk
-
+-Maximizing a window: 
