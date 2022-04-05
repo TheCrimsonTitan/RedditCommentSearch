@@ -11,11 +11,11 @@ reddit=praw.Reddit(
 
         )
 
-RedditorToSearch=input(" InputTheRedditor")
-Term=input(" Input the Phrase")
+RedditorToSearch=input(" Input The Redditor")
+Term=input("Input the Phrase: ")
 
 
-for comment in reddit.redditor('TheRogueTemplar').comments.new(limit=None):
+for comment in reddit.redditor(RedditorToSearch).comments.new(limit=None):
     CommentContents=comment.body
    
    # print(CommentContents)
