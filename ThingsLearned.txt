@@ -6,3 +6,5 @@ https://old.reddit.com/r/redditdev/comments/iqe99f/new_to_python_and_looking_to_
 
 Notes:
 -Learned how to use elements of PRAW to search a user's comments in reddit
+- Had to run this command to get tkinter and pysimple gui working: sudo apt-get install python3-tk
+
