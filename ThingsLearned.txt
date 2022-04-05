@@ -1,0 +1,8 @@
+Sources:
+https://praw.readthedocs.io/en/stable/tutorials/comments.html
+
+
+https://old.reddit.com/r/redditdev/comments/iqe99f/new_to_python_and_looking_to_get_all_user/
+
+Notes:
+-Learned how to use elements of PRAW to search a user's comments in reddit
