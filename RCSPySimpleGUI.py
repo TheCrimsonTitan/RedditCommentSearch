@@ -1,7 +1,7 @@
 import praw
 import tkinter
 import PySimpleGUI as sg
-
+import xlsxwriter as excel
 
 
 #Reddit set up
@@ -21,14 +21,17 @@ def Search(RedditorName, TermtoSearch):
     RedditorToSearch=RedditorName
     Term=TermtoSearch
 
+    #Setting up the excel workbook
+    workbook = excel.Workbook('1.xlsx')
+
 
     for comment in reddit.redditor(RedditorToSearch).comments.new(limit=None):
         CommentContents=comment.body
        
        # print(CommentContents)
         if Term in CommentContents: 
-            print(comment.submission.title)
-            print(CommentContents)
+             print(comment.submission.title)
+           # print(CommentContents)
 
 
 sg.theme('DarktanBlue')
