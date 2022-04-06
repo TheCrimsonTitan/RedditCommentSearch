@@ -5,7 +5,9 @@ import PySimpleGUI as sg
 
 
 #Reddit set up
-def Search():
+def Search(RedditorName, TermtoSearch):
+
+    #print(RedditorName)
     reddit=praw.Reddit(
 
             client_id='sO1ypuzMA0DRwgD8aLcHCQ',
@@ -16,8 +18,8 @@ def Search():
 
             )
 
-    RedditorToSearch=input(" Input The Redditor")
-    Term=input("Input the Phrase: ")
+    RedditorToSearch=RedditorName
+    Term=TermtoSearch
 
 
     for comment in reddit.redditor(RedditorToSearch).comments.new(limit=None):
@@ -33,13 +35,14 @@ sg.theme('DarktanBlue')
 
 layout = [
         [sg.Text("Welcome")],
+        [sg.Text("Name of Redditor:"), sg.InputText(key="Name")],
         [sg.Button("Search")],
         [sg.Button("Exit")],
         
 ]
 
 
-window=sg.Window("Reddit Comment Search", layout, size=(800,600), resizable=True).Finalize()
+window=sg.Window("Reddit Comment Search", layout, size=(400,600), resizable=True).Finalize()
 #window.Maximize()
 
 while True:
@@ -47,7 +50,7 @@ while True:
     if event == "Exit" or event == sg.WIN_CLOSED:
         break
     if event == "Search":
-        Search()
+        Search(values['Name'])
 window.close()
 
 
