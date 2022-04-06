@@ -36,6 +36,7 @@ sg.theme('DarktanBlue')
 layout = [
         [sg.Text("Welcome")],
         [sg.Text("Name of Redditor:"), sg.InputText(key="Name")],
+        [sg.Text("Term to Search"),sg.InputText(key="Term")],
         [sg.Button("Search")],
         [sg.Button("Exit")],
         
@@ -50,7 +51,7 @@ while True:
     if event == "Exit" or event == sg.WIN_CLOSED:
         break
     if event == "Search":
-        Search(values['Name'])
+        Search(values['Name'],values['Term'])
 window.close()
 
 
