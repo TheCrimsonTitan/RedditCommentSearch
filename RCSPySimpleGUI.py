@@ -23,15 +23,25 @@ def Search(RedditorName, TermtoSearch):
 
     #Setting up the excel workbook
     workbook = excel.Workbook('1.xlsx')
+    worksheet=workbook.add_worksheet('Comments')
 
+    row=0
+    col=0
 
     for comment in reddit.redditor(RedditorToSearch).comments.new(limit=None):
         CommentContents=comment.body
        
        # print(CommentContents)
         if Term in CommentContents: 
-             print(comment.submission.title)
+            worksheet.write(row,col, comment.submission.title)
+            worksheet.write(row,col+1, CommentContents) 
+           #  print(comment.submission.title)
            # print(CommentContents)
+        row+=1
+        col+=1
+
+    workbook.close()
+    print("The end")
 
 
 sg.theme('DarktanBlue')
