@@ -10,8 +10,8 @@ def Search(RedditorName, TermtoSearch):
     #print(RedditorName)
     reddit=praw.Reddit(
 
-            client_id='',
-            client_secret='',
+            client_id='sO1ypuzMA0DRwgD8aLcHCQ',
+            client_secret='AAfpbdUosIlYfaxSjWuYzPDJ8rzqQA',
             username='',
             password='',
             user_agent='RedditCommentSearch'
